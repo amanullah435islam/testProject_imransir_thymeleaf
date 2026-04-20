@@ -31,6 +31,11 @@
     <td th:text="${e.name}"></td>
     <td th:text="${e.salary}"></td>
     <td th:text="${e.designation}"></td>
+    <td>
+        <a th:href="@{'/edit/' + ${e.id}}" class="btn btn-warning">Edit</a>
+<!--        <a th:href="@{'/delete/' + ${e.id}}" class="btn btn-danger">Delete</a>-->
+        <a th:href="@{/delete/{id}(id=${e.id})}" class="btn btn-danger">Delete</a>
+    </td>
     <td></td>
 </tr>
 </tbody>

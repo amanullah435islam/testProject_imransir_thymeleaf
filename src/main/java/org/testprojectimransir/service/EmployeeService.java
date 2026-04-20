@@ -26,7 +26,10 @@ public class EmployeeService {
     }
 
     public void delete(long id){
-        repo.existsById(id);
+
+        if(repo.existsById(id)){
+            repo.deleteById(id);
+        }
     }
 
 
